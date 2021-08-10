@@ -8,6 +8,8 @@
   --bgcolor-filter-btn-active: #2196f3;
   --bgcolor-footer: #2f303a;
   --bgcolor-hero: #2f303a;
+  --bgcolor-our-team: #f5f4fa;
+  --bgcolor-our-team-member: #ffffff;
 
   --fontcolor-body: #212121;
   --fontcolor-navigation: #212121;
@@ -29,6 +31,12 @@
   --logo-color: #2196f3;
   --logo-black: #212121;
   --logo-white: #ffffff;
+}
+
+h1,
+h2 {
+  padding: 0;
+  margin: 0;
 }
 
 .logo {
@@ -99,7 +107,7 @@ ul {
 
 .hero .container {
   background: var(--bgcolor-hero);
-  height: 600px;
+  /*  height: 600px;*/
 }
 
 .hero-title {
@@ -138,7 +146,7 @@ ul {
   font-weight: bold;
 }
 
-.our-team .our-team-header {
+.our-team .our-team-title {
   font-size: 36px;
   line-height: 1.67;
   font-weight: bold;
@@ -176,17 +184,20 @@ ul {
   background: var(--bgcolor-filter-btn-active);
 }
 
-footer {
+.page-footer .container {
   background: var(--bgcolor-footer);
   font-size: 14px;
   color: var(--fontcolor-footer);
   letter-spacing: 0.03em;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 footer .page-contacts {
   font-style: normal;
   line-height: 1.7;
   color: var(--fontcolor-footer-address);
+  margin-top: 20px;
 }
 
 .projects .projects-element {
@@ -252,11 +263,70 @@ footer .page-contacts {
 }
 
 .hero .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  text-align: center;
+  padding: 200px 0;
 }
 
-.hero .title {
-  padding: 200 0 0 0;
+.hero .order-service-btn {
+  margin-top: 30px;
+}
+
+.features-section-title {
+  display: none;
+}
+
+.features .container {
+  padding: 94px 15px;
+}
+.features-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.features .feature-element {
+  width: 270px;
+}
+
+.features .features-list {
+  margin: 0 auto;
+}
+
+.our-job-title,
+.our-team-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.our-job-list,
+.our-team-list {
+  display: flex;
+}
+
+.our-job-list img,
+.our-team-list img {
+  display: block;
+}
+
+.our-job-element,
+.our-team-member {
+  margin-right: 30px;
+}
+.our-job-element:last-child,
+.our-team-member:last-child {
+  margin-right: 0;
+}
+
+.our-team .container {
+  background-color: var(--bgcolor-our-team);
+  margin-top: 94px;
+  padding-top: 94px;
+  padding-bottom: 94px;
+  text-align: center;
+}
+
+.our-team-member {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background: var(--bgcolor-our-team-member);
 }
