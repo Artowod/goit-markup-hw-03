@@ -74,19 +74,19 @@ ul {
   color: var(--fontcolor-navigation-focus-hover);
 }
 
-.contacts-header:hover,
-.contacts-header:focus,
+.contacts-header-element:hover,
+.contacts-header-element:focus,
 .contacts-footer:hover,
 .contacts-footer:focus {
   color: var(--fontcolor-contacts-focus-hover);
 }
-.contacts-header,
+.contacts-header-element,
 .contacts-footer {
   color: var(--fontcolor-contacts);
   font-size: 14px;
 }
 
-.contacts-header {
+.contacts-header-element {
   line-height: 1.15;
   font-weight: 500;
 }
@@ -195,4 +195,45 @@ footer .page-contacts {
 .projects .project-type {
   line-height: 1.88;
   color: var(--fontcolor-projects-type);
+}
+
+.container {
+  width: 1600px;
+  border: 1px solid;
+}
+
+.page-header .container {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.page-header .logo {
+  margin: 0 0 0 215px;
+}
+
+.page-header .page-nav {
+  margin: 0 0 0 68px;
+  /*93 - 25*/
+}
+
+.page-header .navigation-element,
+.page-header .navigation-element {
+  margin: 0 25px;
+}
+
+.page-header .contacts-list-header {
+  margin: 0 0 0 281px;
+  /*331 - 25-25*/
+}
+
+.page-header .main-nav-list,
+.page-header .contacts-list-header {
+  display: flex;
+  justify-content: start;
+}
+
+.page-header .contacts-header-element,
+.page-header .navigation-element {
+  margin: 0 25px;
 }
