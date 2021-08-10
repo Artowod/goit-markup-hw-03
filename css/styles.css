@@ -7,12 +7,14 @@
   --bgcolor-order-service-btn-hover: #188ce8;
   --bgcolor-filter-btn-active: #2196f3;
   --bgcolor-footer: #2f303a;
+  --bgcolor-hero: #2f303a;
 
   --fontcolor-body: #212121;
   --fontcolor-navigation: #212121;
   --fontcolor-navigation-focus-hover: #2196f3;
   --fontcolor-contacts: #757575;
   --fontcolor-contacts-focus-hover: #2196f3;
+  --fontcolor-hero: #ffffff;
   --fontcolor-order-service-btn: #ffffff;
   --fontcolor-filter-btn-active: #ffffff;
   --fontcolor-teammates-positions: #757575;
@@ -95,10 +97,16 @@ ul {
   line-height: 1.72;
 }
 
+.hero .container {
+  background: var(--bgcolor-hero);
+  height: 600px;
+}
+
 .hero-title {
   font-size: 44px;
   line-height: 1.36;
   font-weight: 900;
+  color: var(--fontcolor-hero);
 }
 
 .order-service-btn {
@@ -199,25 +207,29 @@ footer .page-contacts {
 
 .container {
   width: 1200px;
-  margin: 0;
+  margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  border: 1px solid;
+  /*border: 1px solid; ДЛЯ СЕБЯ - Уберу в конце*/
 }
 
 .page-header .container {
   display: flex;
   align-items: center;
-  height: 80px;
-  justify-content: space-between;
+  border-bottom: 1px solid gray;
 }
 
 .page-header .logo {
   margin: 0;
 }
 
+.main-nav-list a {
+  padding: 32px 0;
+  display: block;
+}
+
 .page-header .page-nav {
-  margin: 0;
+  margin: 0 0 0 93px;
 }
 
 .page-header .navigation-element,
@@ -227,14 +239,24 @@ footer .page-contacts {
 
 .page-header .contacts-list-header {
   display: flex;
+  margin-left: auto;
 }
 
 .page-header .main-nav-list {
   display: flex;
-  justify-content: flex-start;
 }
 
 .navigation-element:last-child,
 .contacts-header-element:last-child {
   margin-right: 0;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .title {
+  padding: 200 0 0 0;
 }
