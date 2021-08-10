@@ -2,9 +2,10 @@
 
 :root {
   --bgcolor-body: #ffffff;
-  --bgcolor-filter-button: #f5f4fa;
-  --bgcolor-order-service-button: #2196f3;
-  --bgcolor-filter-button-active: #2196f3;
+  --bgcolor-filter-btn: #f5f4fa;
+  --bgcolor-order-service-btn: #2196f3;
+  --bgcolor-order-service-btn-hover: #188ce8;
+  --bgcolor-filter-btn-active: #2196f3;
   --bgcolor-footer: #2f303a;
 
   --fontcolor-body: #212121;
@@ -12,8 +13,8 @@
   --fontcolor-navigation-focus-hover: #2196f3;
   --fontcolor-contacts: #757575;
   --fontcolor-contacts-focus-hover: #2196f3;
-  --fontcolor-order-service-button: #ffffff;
-  --fontcolor-filter-button-active: #ffffff;
+  --fontcolor-order-service-btn: #ffffff;
+  --fontcolor-filter-btn-active: #ffffff;
   --fontcolor-teammates-positions: #757575;
   --fontcolor-projects-type: #757575;
 
@@ -56,20 +57,20 @@ ul {
   list-style-type: none;
 }
 
-.navigation {
+.navigation-element {
   color: var(--fontcolor-navigation);
   font-size: 14px;
   line-height: 1.15;
   font-weight: 500;
 }
 
-.navigation:hover,
-.navigation:focus,
-.navigation:active {
+.navigation-element:hover,
+.navigation-element:focus,
+.navigation-element:active {
   color: var(--fontcolor-navigation-focus-hover);
 }
 
-.is-active {
+.navigation-element .is-active {
   color: var(--fontcolor-navigation-focus-hover);
 }
 
@@ -94,56 +95,60 @@ ul {
   line-height: 1.72;
 }
 
-.hero {
+.hero-title {
   font-size: 44px;
   line-height: 1.36;
   font-weight: 900;
 }
 
-.order-service-button {
-  font-weight: bold;
+.order-service-btn {
+  font-weight: 700;
   line-height: 1.88;
-  color: var(--fontcolor-order-service-button);
-  background: var(--bgcolor-order-service-button);
+  color: var(--fontcolor-order-service-btn);
+  background: var(--bgcolor-order-service-btn);
+}
+.order-service-btn:hover,
+.order-service-btn:focus {
+  background: var(--bgcolor-order-service-btn-hover);
 }
 
-.features h3 {
+.features .feature-title {
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.15;
 }
 
-.features p {
+.features .feature-descr {
   font-size: 14px;
   line-height: 2;
 }
 
-.our-job h2 {
+.our-job .our-job-title {
   font-size: 36px;
   line-height: 1.67;
   font-weight: bold;
 }
 
-.our-team h2 {
+.our-team .our-team-header {
   font-size: 36px;
   line-height: 1.67;
   font-weight: bold;
 }
 
-.our-team h3 {
+.our-team .member-name {
   font-size: 16px;
   line-height: 1.19;
   font-weight: 500;
 }
 
-.our-team .position {
+.our-team .member-position {
   line-height: 1.19;
   color: var(--fontcolor-teammates-positions);
 }
 
-.filter button {
-  background: var(--bgcolor-filter-button);
+.filter-element button {
+  background: var(--bgcolor-filter-btn);
   border-style: none;
   border-radius: 4px;
   cursor: pointer;
@@ -151,16 +156,16 @@ ul {
   line-height: 1.63;
 }
 
-.projects .filter {
+.projects .filter-list {
   border: none;
   box-sizing: content-box;
 }
 
-.filter button:active,
-.filter button:focus,
-.filter button:hover {
-  color: var(--fontcolor-filter-button-active);
-  background: var(--bgcolor-filter-button-active);
+.filter-element button:active,
+.filter-element button:focus,
+.filter-element button:hover {
+  color: var(--fontcolor-filter-btn-active);
+  background: var(--bgcolor-filter-btn-active);
 }
 
 footer {
@@ -170,27 +175,24 @@ footer {
   letter-spacing: 0.03em;
 }
 
-address {
+footer .page-contacts {
   font-style: normal;
-}
-
-footer address {
-  color: var(--fontcolor-footer-address);
   line-height: 1.7;
+  color: var(--fontcolor-footer-address);
 }
 
-.projects li {
+.projects .projects-element {
   border: 1px solid var(--bordercolor-project);
   box-sizing: border-box;
 }
 
-.projects h3 {
+.projects .project-name {
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
 }
 
-.projects p {
+.projects .project-type {
   line-height: 1.88;
   color: var(--fontcolor-projects-type);
 }
