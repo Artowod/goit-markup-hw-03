@@ -28,6 +28,7 @@
   --fontcolor-footer-address: #ffffff;
 
   --bordercolor-project: #eeeeee;
+  --bordercolor-header: #ececec;
 
   --logo-color: #2196f3;
   --logo-black: #212121;
@@ -47,6 +48,13 @@ h2 {
   line-height: 1.2;
   color: var(--logo-color);
   letter-spacing: 0.03em;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .logo .logo-black {
@@ -106,9 +114,14 @@ ul {
   line-height: 1.72;
 }
 
-.hero .container {
+.hero {
+  padding: 200px 0;
+  text-align: center;
   background: var(--bgcolor-hero);
-  /*  height: 600px;*/
+}
+
+.hero .order-service-btn {
+  margin-top: 30px;
 }
 
 .hero-title {
@@ -116,6 +129,8 @@ ul {
   line-height: 1.36;
   font-weight: 900;
   color: var(--fontcolor-hero);
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .order-service-btn {
@@ -136,11 +151,17 @@ ul {
   font-weight: bold;
   text-transform: uppercase;
   line-height: 1.15;
+  margin-bottom: 10px;
 }
 
 .features .feature-descr {
+  color: var(--fontcolor-projects-type);
   font-size: 14px;
-  line-height: 2;
+  line-height: 1.72;
+}
+
+.our-job {
+  padding-bottom: 94px;
 }
 
 .our-job .our-job-title {
@@ -159,11 +180,14 @@ ul {
   font-size: 16px;
   line-height: 1.19;
   font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .our-team .member-position {
   line-height: 1.19;
   color: var(--fontcolor-teammates-positions);
+  margin-bottom: 30px;
 }
 
 .filter-element button {
@@ -173,6 +197,12 @@ ul {
   cursor: pointer;
   font-size: 16px;
   line-height: 1.63;
+  padding: 6px 22px;
+}
+
+.filter-element .is-active {
+  color: var(--fontcolor-filter-btn-active);
+  background: var(--bgcolor-filter-btn-active);
 }
 
 .projects .filter-list {
@@ -187,7 +217,7 @@ ul {
   background: var(--bgcolor-filter-btn-active);
 }
 
-.page-footer .container {
+footer {
   background: var(--bgcolor-footer);
   font-size: 14px;
   color: var(--fontcolor-footer);
@@ -196,7 +226,7 @@ ul {
   padding-bottom: 60px;
 }
 
-footer .page-contacts {
+.page-footer .page-contacts {
   font-style: normal;
   line-height: 1.7;
   color: var(--fontcolor-footer-address);
@@ -204,8 +234,18 @@ footer .page-contacts {
 }
 
 .projects .projects-element {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.projects .projects-element:nth-child(3n + 3) {
+  margin-right: 0;
+}
+
+.projects .project-descript {
   border: 1px solid var(--bordercolor-project);
   box-sizing: border-box;
+  padding: 20px 24px;
 }
 
 .projects .project-name {
@@ -219,18 +259,13 @@ footer .page-contacts {
   color: var(--fontcolor-projects-type);
 }
 
-.container {
-  width: 1200px;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  /*border: 1px solid; ДЛЯ СЕБЯ - Уберу в конце*/
+.page-header {
+  border-bottom: 1px solid var(--bordercolor-header);
 }
 
 .page-header .container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid gray;
 }
 
 .page-header .logo {
@@ -265,21 +300,13 @@ footer .page-contacts {
   margin-right: 0;
 }
 
-.hero .container {
-  text-align: center;
-  padding: 200px 0;
-}
-
-.hero .order-service-btn {
-  margin-top: 30px;
-}
-
 .features-section-title {
   display: none;
 }
 
-.features .container {
-  padding: 94px 15px;
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .features-list {
   display: flex;
@@ -321,7 +348,6 @@ footer .page-contacts {
 
 .our-team .container {
   background-color: var(--bgcolor-our-team);
-  margin-top: 94px;
   padding-top: 94px;
   padding-bottom: 94px;
   text-align: center;
@@ -332,4 +358,36 @@ footer .page-contacts {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background: var(--bgcolor-our-team-member);
+}
+
+.projects-title {
+  display: none;
+}
+
+.projects {
+  padding-top: 94px;
+  padding-bottom: 64px; /*94 - 30  где 30 - нижний маржин нижних проектов*/
+}
+
+.projects .container,
+.filter-list,
+.projects-list {
+  display: flex;
+}
+
+.projects .container {
+  flex-direction: column;
+}
+
+.filter-list {
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.filter-element:not(:last-child) {
+  margin-right: 8px;
+}
+
+.projects-list {
+  flex-wrap: wrap;
 }
