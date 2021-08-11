@@ -4,6 +4,7 @@
   --bgcolor-body: #ffffff;
   --bgcolor-filter-btn: #f5f4fa;
   --bgcolor-order-service-btn: #2196f3;
+  --bgcolor-order-service-btn-shadow: rgba(0, 0, 0, 0.15);
   --bgcolor-order-service-btn-hover: #188ce8;
   --bgcolor-filter-btn-active: #2196f3;
   --bgcolor-footer: #2f303a;
@@ -122,6 +123,8 @@ ul {
   line-height: 1.88;
   color: var(--fontcolor-order-service-btn);
   background: var(--bgcolor-order-service-btn);
+  box-shadow: 0px 4px 4px var(--bgcolor-order-service-btn-shadow);
+  border-radius: 4px;
 }
 .order-service-btn:hover,
 .order-service-btn:focus {
