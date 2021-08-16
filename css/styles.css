@@ -360,10 +360,10 @@ footer {
 .our-team {
   padding-top: 94px;
   padding-bottom: 94px;
+  background-color: var(--bgcolor-our-team);
 }
 
 .our-team .container {
-  background-color: var(--bgcolor-our-team);
   text-align: center;
 }
 
